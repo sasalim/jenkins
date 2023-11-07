@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 		features="src/test/resources/features",
 		glue= {"steps"},monochrome=true, strict=true,
 		tags="@tag1",
-		plugin = {
-				"pretty", "html:target/rapport.html", "json:target/rapport.json"
-		})
+		plugin = {"pretty", "json:target/reports/cucumber-report.json",
+                "html:target/reports/cucumber.html"}
+		)
 
 public class runner {
 
