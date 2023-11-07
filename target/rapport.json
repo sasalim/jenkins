@@ -3,108 +3,86 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-11-07T07:52:44.097Z",
-        "line": 17,
-        "name": "modification of user name",
-        "description": "",
-        "id": "to-test-modification--functionality;modification-of-user-name;;2",
+        "start_timestamp": "2023-11-07T11:05:40.141Z",
+        "line": 14,
+        "name": "Check login is successful with valid credentials",
+        "description": "    Check login is successful with valid credentials",
+        "id": "to-test-login-functionality;check-login-is-successful-with-valid-credentials;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 11925259700,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "is navigated to the home page",
-            "match": {},
+            "line": 7,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.loginSteps.user_is_on_login_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 336176600,
+              "status": "passed"
             },
-            "line": 7,
-            "name": "clicks on information button",
+            "line": 8,
+            "name": "user enters salimsaafi89@gmail.com and kelibia2023",
             "match": {
-              "location": "steps.modifSteps.clicks_on_information_button()"
+              "arguments": [
+                {
+                  "val": "salimsaafi89@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "kelibia2023",
+                  "offset": 39
+                }
+              ],
+              "location": "steps.loginSteps.user_enters_email_and_password(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "clear  salim",
-            "match": {
-              "location": "steps.modifSteps.clear_salim(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 999900,
-              "status": "skipped"
+              "duration": 4748168900,
+              "status": "passed"
             },
             "line": 9,
-            "name": "whrite selim",
+            "name": "clicks on login button",
             "match": {
-              "location": "steps.modifSteps.whrite_selim(java.lang.String)"
+              "location": "steps.loginSteps.clicks_on_login_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat steps.loginSteps.user_is_navigated_to_the_home_page(loginSteps.java:46)\r\n\tat ✽.user is navigated to the home page(file:///C:/Users/ssaafi/Documents/sasalim/Module_5/Lecon-5.6/Act-5.6.1/designPattern/src/test/resources/features/login.feature:10)\r\n",
+              "duration": 3000300,
+              "status": "pending"
             },
             "line": 10,
-            "name": "enter  kelibia2023",
+            "name": "user is navigated to the home page",
             "match": {
-              "arguments": [
-                {
-                  "val": " kelibia2023",
-                  "offset": 6
-                }
-              ],
-              "location": "steps.modifSteps.enter_password(java.lang.String)"
+              "location": "steps.loginSteps.user_is_navigated_to_the_home_page()"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 999400,
-              "status": "skipped"
-            },
-            "line": 11,
-            "name": "clicks save",
-            "match": {
-              "location": "steps.modifSteps.clicks_save()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 12,
-            "name": "information is modified",
-            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@tag3"
+            "name": "@tag1"
           }
         ]
       }
     ],
-    "name": "to test modification  functionality",
+    "name": "to test login functionality",
     "description": "",
-    "id": "to-test-modification--functionality",
+    "id": "to-test-login-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/modif.feature",
+    "uri": "file:src/test/resources/features/login.feature",
     "tags": []
   }
 ]

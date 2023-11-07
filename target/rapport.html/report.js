@@ -1,45 +1,33 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/modif.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/login.feature");
 formatter.feature({
-  "name": "to test modification  functionality",
+  "name": "to test login functionality",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "modification of user name",
-  "description": "",
+  "name": "Check login is successful with valid credentials",
+  "description": "    Check login is successful with valid credentials",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@tag3"
+      "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "name": "is navigated to the home page",
+  "name": "user is on login page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "clicks on information button",
+  "name": "user enters \u003cusername\u003e and \u003cpassword\u003e",
   "keyword": "When "
 });
 formatter.step({
-  "name": "clear  \u003cfirstname\u003e",
+  "name": "clicks on login button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "whrite \u003cfirstname1\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "enter  \u003cpassword\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "clicks save",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "information is modified",
+  "name": "user is navigated to the home page",
   "keyword": "Then "
 });
 formatter.examples({
@@ -49,94 +37,67 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "firstname",
-        "firstname1",
+        "username",
         "password"
       ]
     },
     {
       "cells": [
-        "salim",
-        "selim",
+        "salimsaafi89@gmail.com",
         "kelibia2023"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "modification of user name",
-  "description": "",
+  "name": "Check login is successful with valid credentials",
+  "description": "    Check login is successful with valid credentials",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@tag3"
+      "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "name": "is navigated to the home page",
+  "name": "user is on login page",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "steps.loginSteps.user_is_on_login_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "clicks on information button",
+  "name": "user enters salimsaafi89@gmail.com and kelibia2023",
   "keyword": "When "
 });
 formatter.match({
-  "location": "steps.modifSteps.clicks_on_information_button()"
+  "location": "steps.loginSteps.user_enters_email_and_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "clear  salim",
+  "name": "clicks on login button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "steps.modifSteps.clear_salim(java.lang.String)"
+  "location": "steps.loginSteps.clicks_on_login_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "whrite selim",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.modifSteps.whrite_selim(java.lang.String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "enter  kelibia2023",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.modifSteps.enter_password(java.lang.String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "clicks save",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.modifSteps.clicks_save()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "information is modified",
+  "name": "user is navigated to the home page",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "steps.loginSteps.user_is_navigated_to_the_home_page()"
+});
 formatter.result({
-  "status": "undefined"
+  "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat steps.loginSteps.user_is_navigated_to_the_home_page(loginSteps.java:46)\r\n\tat ✽.user is navigated to the home page(file:///C:/Users/ssaafi/Documents/sasalim/Module_5/Lecon-5.6/Act-5.6.1/designPattern/src/test/resources/features/login.feature:10)\r\n",
+  "status": "pending"
 });
 });
